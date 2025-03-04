@@ -1,0 +1,2 @@
+// Use npm to create a new Vite project
+npm create vite@latest  

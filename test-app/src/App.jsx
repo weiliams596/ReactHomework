@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Homework from './components/4_3_2025/HomeWork/Homework.jsx'
+import Homework1 from './components/D1_W26_HW/HomeWork/Homework'
 import './App.css'
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-    <Homework/>
+    <Homework1/>
     </>
   //   <>
   //     <div>
