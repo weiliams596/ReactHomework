@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root{
+    display: flex;
+    justify-content: center;
+}
+
+.homework-main{
+    display: flex;
+    width: 80%;
+    height: auto;
+    flex-direction: column;    
+}
+
+.homework-section{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.homework-div{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.homework-div a{
+    padding:20px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;    
+}
+
+.homework-div a:hover{
+    background-color: #007bff;
+}
