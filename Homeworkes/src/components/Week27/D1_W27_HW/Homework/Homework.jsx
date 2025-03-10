@@ -1,10 +1,18 @@
-import React from 'react'
+import React ,{useState}from "react";
+
+import "./Homework.css";
 
 export default function Homework() {
+  const [color, setColor] = useState('white');
+  const RandomColorBox = () => {
+    return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+  };
   return (
-   <main>
-    <h1>Homework 27</h1>
-    <p>This is the homework for week 27 of the React course.</p>
-   </main>
-  )
+    <main>
+      <h1>Homework 27</h1>
+      <div style={{backgroundColor: color}} className="random-color-box" onClick={(e)=>setColor(RandomColorBox)}>
+      </div>
+      <button onClick={()=>setColor(RandomColorBox())}>Random color change</button>
+    </main>
+  );
 }
