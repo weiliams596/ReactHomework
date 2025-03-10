@@ -1,0 +1,29 @@
+.header {
+    background: linear-gradient(135deg, #0000FF 25%, transparent 25%) -50px 0,
+        linear-gradient(225deg, #0000FF 25%, transparent 25%) -50px 0;
+    background-size: 240px 245px;
+    background-color: #1E90FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.link-list{
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+}
+
+.link-list a{
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.link-list a:hover{
+    color: #00BFFF;
+}

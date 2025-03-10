@@ -39,3 +39,8 @@
 .homework-div a:hover{
     background-color: #007bff;
 }
+
+.class-home-work{
+    display: flex;
+    flex-direction: column;
+}

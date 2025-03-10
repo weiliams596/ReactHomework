@@ -5,7 +5,7 @@ import ProfileCard from "./ProfileCard";
 export default function ClassTest() {
   return (
     <>
-      <HeaderH />
+      <Header title="Class Test" description="This is a class test" author="John Doe" />
       <ProfileCard />
     </>
   );
