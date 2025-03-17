@@ -5,6 +5,7 @@ import HomeWork4 from './Week26/D3_W26_HW/Homework/Homework';
 
 import HomeWork2_1 from './Week27/D1_W27_HW/Homework/Homework';
 import HomeWork2_2 from './Week27/D2_W27_HW/Homework/Homework';
+import HomeWork2_3 from './Week27/D3_W27_HW/Homework/Homework';
 
 const routes = [
     {
@@ -22,23 +23,28 @@ const routes = [
                 id: 3,
                 path: '/HW3',
                 component: HomeWork3
-            },{
-                id:4,
+            }, {
+                id: 4,
                 path: '/HW4',
                 component: HomeWork4
             }
         ]
-    }, {
+    },
+    {
         week: 27,
         homework: [
             {
                 id: 5,
                 path: '/HW5',
                 component: HomeWork2_1
-            },{
+            }, {
                 id: 6,
                 path: '/HW6',
                 component: HomeWork2_2
+            }, {
+                id: 7,
+                path: '/HW7',
+                component: HomeWork2_3
             }
         ]
     }

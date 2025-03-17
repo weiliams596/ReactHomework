@@ -5,6 +5,7 @@ import ClassTest4 from './Week26/D4_W26_HW/ClassTest/ClassTest';
 
 import ClassTest2_1 from './Week27/D1_W27_HW/ClassTest/ClassTest';
 import ClassTest2_2 from './Week27/D2_W27_HW/ClassTest/ClassTest';
+import ClassTest2_3 from './Week27/D3_W27_HW/ClassTest/ClassTest';
 
 const routes = [
     {
@@ -39,6 +40,10 @@ const routes = [
                     id: 206,
                     path: '/CT6',
                     element: ClassTest2_2
+                },{
+                    id: 207,
+                    path: '/CT7',
+                    element: ClassTest2_3
                 }
         ]
     }
