@@ -7,6 +7,8 @@ import HomeWork2_1 from './Week27/D1_W27_HW/Homework/Homework';
 import HomeWork2_2 from './Week27/D2_W27_HW/Homework/Homework';
 import HomeWork2_3 from './Week27/D3_W27_HW/Homework/Homework';
 
+
+import Homework3_1 from './Week28/D2_W28_HW/Homework/Homework'
 const routes = [
     {
         week: 26,
@@ -47,7 +49,16 @@ const routes = [
                 component: HomeWork2_3
             }
         ]
-    }
+        
+    },{
+        week: 28,
+        homework: [
+            {
+                id: 8,
+                path: '/HW8/*',
+                component: Homework3_1
+            }]
+        }
 ];
 
 export default routes;
