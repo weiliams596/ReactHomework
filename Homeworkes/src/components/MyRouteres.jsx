@@ -1,4 +1,4 @@
-import React, { use, useContext, useEffect } from "react";
+import React, { useEffect } from "react";
 import {
   BrowserRouter as Router /* HashRouter as Router , */,
   Routes,
@@ -10,7 +10,8 @@ import classRoutes from "./AllClassTestConfig";
 import HomeworkHomePage from "./HomeworkHomePage";
 import "./myrouteres.css";
 
-import GlobalContex from "../MyContext";
+
+
 
 function NotFoundPage() {
   const navigate = useNavigate();
@@ -23,7 +24,7 @@ function NotFoundPage() {
       navigate("/");
       return () => clearTimeout(timer);
     }
-    }, [timeCount]);
+  }, [timeCount]);
 
   return (
     <div className="not-found-page">
@@ -35,55 +36,72 @@ function NotFoundPage() {
     </div>
   );
 }
-export default function MyRouteres() {
-  const { globalInfo } = useContext(GlobalContex);
-  const [childRoutes, setChildRoutes] = React.useState([]);
 
-  useEffect(() => {
-    console.log("globalInfo", globalInfo);
-    if (globalInfo.routes) {
-      setChildRoutes(globalInfo.routes);
-      console.log(childRoutes);
-    }
-  },[globalInfo.routes]);
+
+
+export default function MyRouteres() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<HomeworkHomePage />} />
-        {routes.map((item) => {
-          return item.homework.map((page) => {
-            return (
+        {routes.map((homeWorkInfo) => {
+          return homeWorkInfo.homework.map((HWRoute) => {
+            return HWRoute.chilldren ? (
               <Route
-                key={page.id}
-                path={page.path}
-                element={<page.component />}
+              key={HWRoute.id}
+                id={HWRoute.id}
+                path={HWRoute.path }
+                element={<HWRoute.component />}>
+                {HWRoute.chilldren.map((childRoute) => {
+                  return (
+                    <Route
+                    key={childRoute.id}
+                      id={childRoute.id}
+                      path={childRoute.path}
+                      element={<childRoute.component />}
+                    />
+                  );
+                })}
+              </Route>
+            ) : (
+              <Route
+              key={HWRoute.id}
+                id={HWRoute.id}
+                path={HWRoute.path}
+                element={<HWRoute.component />}
               />
             );
           });
         })}
-        {classRoutes.map((item) => {
-          return item.classtest.map((page) => {
-            return (
+        {classRoutes.map((classTestInfo) => {
+          return classTestInfo.classtest.map((CTRoute) => {
+            return CTRoute.chilldren ? (
               <Route
-                key={page.id}
-                path={page.path}
-                element={<page.element />}
+              key={CTRoute.id}
+                id={CTRoute.id}
+                path={CTRoute.path }
+                element={<CTRoute.component />}>
+                {CTRoute.chilldren.map((childRoute) => {
+                  return (
+                    <Route
+                    key={childRoute.id}
+                      id={childRoute.id}
+                      path={childRoute.path}
+                      element={<childRoute.component />}
+                    />
+                  );
+                })}
+              </Route>
+            ) : (
+              <Route
+              key={CTRoute.id}
+                id={CTRoute.id}
+                path={CTRoute.path}
+                element={<CTRoute.component />}
               />
             );
           });
         })}
-        {
-          childRoutes &&
-          childRoutes.map((item) => {
-              return (
-                <Route
-                  key={item.id}
-                  path={item.path}
-                  element={<item.element />}
-                />
-              );
-            })
-          }
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>
