@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   BrowserRouter as Router /* HashRouter as Router , */,
   Routes,
@@ -11,11 +11,19 @@ import HomeworkHomePage from "./HomeworkHomePage";
 import "./myrouteres.css";
 
 
-
-
 function NotFoundPage() {
   const navigate = useNavigate();
   const [timeCount, setTimeCount] = React.useState(5);
+  const notFundIndex = localStorage.getItem("NotFundIndex");
+  useEffect(() => {
+    if (notFundIndex==9) {
+      navigate("/HW9");
+    }
+    else if(notFundIndex==10){
+      navigate("/HW10");
+    }
+  }, [notFundIndex]);
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setTimeCount(timeCount - 1);
@@ -40,6 +48,20 @@ function NotFoundPage() {
 
 
 export default function MyRouteres() {
+  const [notFundIndex, setNotFundIndex] = useState(0);
+  useEffect(() => {
+    if (window.location.pathname.includes("/HW9")) {
+      setNotFundIndex(9);
+    }
+    else if (window.location.pathname.includes("/HW10")) {
+      setNotFundIndex(10);
+    }
+  }, [window.location.pathname]);
+
+  useEffect(() => {
+    localStorage.setItem("NotFundIndex", notFundIndex);
+  }, [notFundIndex]);
+
   return (
     <Router>
       <Routes>
@@ -48,14 +70,14 @@ export default function MyRouteres() {
           return homeWorkInfo.homework.map((HWRoute) => {
             return HWRoute.chilldren ? (
               <Route
-              key={HWRoute.id}
+                key={HWRoute.id}
                 id={HWRoute.id}
-                path={HWRoute.path }
+                path={HWRoute.path}
                 element={<HWRoute.component />}>
                 {HWRoute.chilldren.map((childRoute) => {
                   return (
                     <Route
-                    key={childRoute.id}
+                      key={childRoute.id}
                       id={childRoute.id}
                       path={childRoute.path}
                       element={<childRoute.component />}
@@ -65,7 +87,7 @@ export default function MyRouteres() {
               </Route>
             ) : (
               <Route
-              key={HWRoute.id}
+                key={HWRoute.id}
                 id={HWRoute.id}
                 path={HWRoute.path}
                 element={<HWRoute.component />}
@@ -77,14 +99,14 @@ export default function MyRouteres() {
           return classTestInfo.classtest.map((CTRoute) => {
             return CTRoute.chilldren ? (
               <Route
-              key={CTRoute.id}
+                key={CTRoute.id}
                 id={CTRoute.id}
-                path={CTRoute.path }
+                path={CTRoute.path}
                 element={<CTRoute.component />}>
                 {CTRoute.chilldren.map((childRoute) => {
                   return (
                     <Route
-                    key={childRoute.id}
+                      key={childRoute.id}
                       id={childRoute.id}
                       path={childRoute.path}
                       element={<childRoute.component />}
@@ -94,7 +116,7 @@ export default function MyRouteres() {
               </Route>
             ) : (
               <Route
-              key={CTRoute.id}
+                key={CTRoute.id}
                 id={CTRoute.id}
                 path={CTRoute.path}
                 element={<CTRoute.component />}

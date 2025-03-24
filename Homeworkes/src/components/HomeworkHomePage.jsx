@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import routes from "./AllHomeWorkConfig.js";
 import classRoutes from "./AllClassTestConfig.js";
 import "./HomeworkHomePage.css";
 
 export default function HomeworkHomePage() {
+  useEffect(() => {
+    localStorage.setItem("NotFundIndex", 0);
+  });
   return (
     <main key="homework-main" className="homework-main">
       {routes.map((item, index1) => {

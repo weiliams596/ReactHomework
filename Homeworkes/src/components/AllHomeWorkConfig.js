@@ -13,9 +13,10 @@ import HomeWork2_3 from './Week27/D3_W27_HW/Homework/Homework';
 //  Router
 import Homework3_1 from './Week28/D2_W28_HW/Homework/Homework';
 //  Router chilldren
-import HW3_1Child1 from './Week28/D2_W28_HW/Homework/Pages/Profile';
-import HW3_1Child2 from './Week28/D2_W28_HW/Homework/Pages/Project';
-import HW3_1Child3 from './Week28/D2_W28_HW/Homework/Pages/About';
+import HW3_1Child1 from './Week28/D3_W28_HW/Homework/Pages/Home';
+import HW3_1Child2 from './Week28/D2_W28_HW/Homework/Pages/Profile';
+import HW3_1Child3 from './Week28/D2_W28_HW/Homework/Pages/Projects';
+import HW3_1Child4 from './Week28/D2_W28_HW/Homework/Pages/About';
 
 //  
 import Homework3_2 from './Week28/D3_W28_HW/Homework/Homework';
@@ -24,6 +25,14 @@ import HW3_2Child1 from './Week28/D3_W28_HW/Homework/Pages/Home';
 import HW3_2Child2 from './Week28/D3_W28_HW/Homework/Pages/Profile';
 import HW3_2Child3 from './Week28/D3_W28_HW/Homework/Pages/Projects';
 import HW3_2Child4 from './Week28/D3_W28_HW/Homework/Pages/About';
+
+
+import Homework3_3 from './Week28/D4_W28_HW/Homework/Homework';
+
+import HW3_3Child1 from './Week28/D4_W28_HW/Homework/Pages/Home';
+import HW3_3Child2 from './Week28/D4_W28_HW/Homework/Pages/Projects';
+import HW3_3Child3 from './Week28/D4_W28_HW/Homework/Pages/ProjectDetail';
+
 
 const routes = [
     {
@@ -81,9 +90,10 @@ const routes = [
                 path: '/HW8',
                 component: Homework3_1,
                 chilldren:[
-                    {id:8001, path: '/HW8/profile', component: HW3_1Child1 },
-                    {id:8002, path: '/HW8/project', component:HW3_1Child2 },
-                    {id:8003, path: '/HW8/about', component: HW3_1Child3},
+                    {id:8001, path: '/HW8/home', component: HW3_1Child1 },
+                    {id:8002, path: '/HW8/Profile', component:HW3_1Child2 },
+                    {id:8003, path: '/HW8/project', component: HW3_1Child3},
+                    {id:8003, path: '/HW8/about', component: HW3_1Child4},
                   ]
             },
             {
@@ -96,6 +106,16 @@ const routes = [
                     {id:9002, path:'/HW9/profile' ,component:HW3_2Child2},
                     {id:9003, path:'/HW9/project' ,component:HW3_2Child3},
                     {id:9004, path:'/HW9/about' ,component:HW3_2Child4},
+                ]
+            },{
+                id: 10,
+                name:'Dynamic Routing',
+                path:'/HW10',
+                component:Homework3_3,
+                chilldren:[
+                    {id:10001, path:'/HW10/home' ,component:HW3_3Child1},
+                    {id:10002, path:'/HW10/project' ,component:HW3_3Child2},
+                    {id:10003, path:'/HW10/project/:id' ,component:HW3_3Child3},
                 ]
             }
         ]

@@ -20,6 +20,7 @@ import CT3_1Child3 from './Week28/D2_W28_HW/ClassTest/Pages/NotFund'
 //  Dynamic Routing & URL Par ameters exercose
 import ClassTest3_2 from './Week28/D3_W28_HW/ClassTest/ClassTest';
 
+import ClassTest3_3 from './Week28/D3_W28_HW/ClassTest/ClassTest';
 
 const routes = [
     {
@@ -98,6 +99,11 @@ const routes = [
                 name:'Dynamic Routing & URL exercise',
                 path: '/CT9',
                 component: ClassTest3_2
+            },{
+                id: 210,
+                name:'Form exercise',
+                path: '/CT10',
+                component: ClassTest3_3
             }
         ]
     }
