@@ -17,6 +17,13 @@ import HW3_1Child1 from './Week28/D2_W28_HW/Homework/Pages/Profile';
 import HW3_1Child2 from './Week28/D2_W28_HW/Homework/Pages/Project';
 import HW3_1Child3 from './Week28/D2_W28_HW/Homework/Pages/About';
 
+//  
+import Homework3_2 from './Week28/D3_W28_HW/Homework/Homework';
+
+import HW3_2Child1 from './Week28/D3_W28_HW/Homework/Pages/Home';
+import HW3_2Child2 from './Week28/D3_W28_HW/Homework/Pages/Profile';
+import HW3_2Child3 from './Week28/D3_W28_HW/Homework/Pages/Projects';
+import HW3_2Child4 from './Week28/D3_W28_HW/Homework/Pages/About';
 
 const routes = [
     {
@@ -79,15 +86,18 @@ const routes = [
                     {id:8003, path: '/HW8/about', component: HW3_1Child3},
                   ]
             },
-            // {
-            //     id: 9,
-            //     name:'Dynamic Routing & URL Par ameters',
-            //     path:'/HW9',
-            //     component:null,
-            //     chilldren:[
-            //         {id:9001, path:'/HW9/home' ,component:null},
-            //     ]
-            // }
+            {
+                id: 9,
+                name:'Dynamic Routing & URL Par ameters',
+                path:'/HW9',
+                component:Homework3_2,
+                chilldren:[
+                    {id:9001, path:'/HW9/home' ,component:HW3_2Child1},
+                    {id:9002, path:'/HW9/profile' ,component:HW3_2Child2},
+                    {id:9003, path:'/HW9/project' ,component:HW3_2Child3},
+                    {id:9004, path:'/HW9/about' ,component:HW3_2Child4},
+                ]
+            }
         ]
         }
 ];

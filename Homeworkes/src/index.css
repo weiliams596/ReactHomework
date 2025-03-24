@@ -63,7 +63,9 @@ button:focus-visible {
     background-color: #ffffff;
   }
 
-  a {
+  a,
+  input,
+  button {
     color: black;
   }
 

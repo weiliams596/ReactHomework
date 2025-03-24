@@ -17,6 +17,10 @@ import CT3_1Child1 from './Week28/D2_W28_HW/ClassTest/Pages/Home'
 import CT3_1Child2 from './Week28/D2_W28_HW/ClassTest/Pages/Contact'
 import CT3_1Child3 from './Week28/D2_W28_HW/ClassTest/Pages/NotFund'
 
+//  Dynamic Routing & URL Par ameters exercose
+import ClassTest3_2 from './Week28/D3_W28_HW/ClassTest/ClassTest';
+
+
 const routes = [
     {
         week: 26,
@@ -73,22 +77,27 @@ const routes = [
                 component: ClassTest3_1,
                 children: [
                     {
-                        id: 209,
+                        id: 208001,
                         name:'Home',
                         path: '/CT8/Home',
                         component: CT3_1Child1
                     }, {
-                        id: 210,
+                        id: 208002,
                         name:'Contact',
                         path: '/CT8/Contact',
                         component: CT3_1Child2
                     },{
-                        id: 211,
+                        id: 208003,
                         name:'Not Found',
                         path: '/CT8/NotFound',
                         component: CT3_1Child3
                     }
                 ]
+            },{
+                id: 209,
+                name:'Dynamic Routing & URL exercise',
+                path: '/CT9',
+                component: ClassTest3_2
             }
         ]
     }
