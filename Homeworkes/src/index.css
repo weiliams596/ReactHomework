@@ -65,6 +65,7 @@ button:focus-visible {
 
   a,
   input,
+  label,
   button {
     color: black;
   }

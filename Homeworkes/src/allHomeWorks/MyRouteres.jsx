@@ -28,7 +28,7 @@ function NotFoundPage() {
     const timer = setTimeout(() => {
       setTimeCount(timeCount - 1);
     }, 1000);
-    if (timeCount === 0) {
+    if (timeCount <= 0) {
       navigate("/");
       return () => clearTimeout(timer);
     }

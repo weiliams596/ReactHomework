@@ -22,17 +22,18 @@ import HW3_1Child4 from './Week28/D2_W28_HW/Homework/Pages/About';
 import Homework3_2 from './Week28/D3_W28_HW/Homework/Homework';
 
 import HW3_2Child1 from './Week28/D3_W28_HW/Homework/Pages/Home';
-import HW3_2Child2 from './Week28/D3_W28_HW/Homework/Pages/Profile';
-import HW3_2Child3 from './Week28/D3_W28_HW/Homework/Pages/Projects';
+import HW3_2Child2 from './Week28/D3_W28_HW/Homework/Pages/Projects';
+import HW3_2Child3 from './Week28/D3_W28_HW/Homework/Pages/ProjectDetail';
 import HW3_2Child4 from './Week28/D3_W28_HW/Homework/Pages/About';
 
 
 import Homework3_3 from './Week28/D4_W28_HW/Homework/Homework';
 
 import HW3_3Child1 from './Week28/D4_W28_HW/Homework/Pages/Home';
-import HW3_3Child2 from './Week28/D4_W28_HW/Homework/Pages/Projects';
-import HW3_3Child3 from './Week28/D4_W28_HW/Homework/Pages/ProjectDetail';
+import HW3_3Child2 from './Week28/D4_W28_HW/Homework/Pages/Login';
+import HW3_3Child3 from './Week28/D4_W28_HW/Homework/Pages/Register';
 
+import Homework4_1 from './Week29/D1_W29_HW/Homework/Homework';
 
 const routes = [
     {
@@ -98,27 +99,38 @@ const routes = [
             },
             {
                 id: 9,
-                name:'Dynamic Routing & URL Par ameters',
+                name:'Dynamic Routing',
                 path:'/HW9',
                 component:Homework3_2,
                 chilldren:[
                     {id:9001, path:'/HW9/home' ,component:HW3_2Child1},
-                    {id:9002, path:'/HW9/profile' ,component:HW3_2Child2},
-                    {id:9003, path:'/HW9/project' ,component:HW3_2Child3},
+                    {id:9002, path:'/HW9/project' ,component:HW3_2Child2},
+                    {id:9003, path:'/HW9/project/:id' ,component:HW3_2Child3},
                     {id:9004, path:'/HW9/about' ,component:HW3_2Child4},
                 ]
             },{
                 id: 10,
-                name:'Dynamic Routing',
+                name:'Nested, Protected Route',
                 path:'/HW10',
                 component:Homework3_3,
                 chilldren:[
                     {id:10001, path:'/HW10/home' ,component:HW3_3Child1},
-                    {id:10002, path:'/HW10/project' ,component:HW3_3Child2},
-                    {id:10003, path:'/HW10/project/:id' ,component:HW3_3Child3},
+                    {id:10002, path:'/HW10/login' ,component:HW3_3Child2},
+                    {id:10003, path:'/HW10/register',component:HW3_3Child3},
                 ]
             }
         ]
+        },{
+            week: 29,
+            homework: [
+                {
+                    id: 11,
+                    name:'Authentication',
+                    path: '/HW11',
+                    component: Homework4_1,
+                    chilldren: []
+                },
+            ]
         }
 ];
 

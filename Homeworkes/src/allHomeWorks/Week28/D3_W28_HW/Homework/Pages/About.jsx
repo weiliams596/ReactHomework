@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 export default function About() {
     const navigate = useNavigate();
     const handleClick = () => {
-        navigate("/HW9/profile");
+        navigate("/HW9/home");
     }
   return (
     <div>
@@ -23,7 +23,7 @@ export default function About() {
             <li>GLSL</li>
             <li>HLSL</li>            
         </ul>
-        <button onClick={handleClick}>Go to My Profile</button>
+        <button onClick={handleClick}>Go to My Home</button>
     </div>
   )
 }
