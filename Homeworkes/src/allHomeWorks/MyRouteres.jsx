@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {
-  BrowserRouter as Router /* HashRouter as Router , */,
+  BrowserRouter as Router, /*HashRouter as Router ,*/
   Routes,
   Route,
   useNavigate,
@@ -10,16 +10,14 @@ import classRoutes from "./AllClassTestConfig";
 import HomeworkHomePage from "./HomeworkHomePage";
 import "./myrouteres.css";
 
-
 function NotFoundPage() {
   const navigate = useNavigate();
   const [timeCount, setTimeCount] = React.useState(5);
   const notFundIndex = localStorage.getItem("NotFundIndex");
   useEffect(() => {
-    if (notFundIndex==9) {
+    if (notFundIndex == 9) {
       navigate("/HW9");
-    }
-    else if(notFundIndex==10){
+    } else if (notFundIndex == 10) {
       navigate("/HW10");
     }
   }, [notFundIndex]);
@@ -45,15 +43,12 @@ function NotFoundPage() {
   );
 }
 
-
-
 export default function MyRouteres() {
   const [notFundIndex, setNotFundIndex] = useState(0);
   useEffect(() => {
     if (window.location.pathname.includes("/HW9")) {
       setNotFundIndex(9);
-    }
-    else if (window.location.pathname.includes("/HW10")) {
+    } else if (window.location.pathname.includes("/HW10")) {
       setNotFundIndex(10);
     }
   }, [window.location.pathname]);

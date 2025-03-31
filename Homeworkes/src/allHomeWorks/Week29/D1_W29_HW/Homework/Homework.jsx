@@ -42,7 +42,7 @@ export default function Homework() {
     setAppraise("5");
     setIsFeedBackShow(false);
     setLowAppraise("");
-    alert("Сіздің бағаңізді сәтті қабылдап алдық!");
+    alert("Рахмет, сіздің пікіріңіз маңызды!");
   };
 
   useEffect(()=>{
@@ -74,6 +74,7 @@ export default function Homework() {
       }
     }
   },[lowAppraise]);
+
   return (
     <div>
       <h1>Кері байланыс Формасы</h1>
