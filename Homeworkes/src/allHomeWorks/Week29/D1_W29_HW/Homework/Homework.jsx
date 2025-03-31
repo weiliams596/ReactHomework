@@ -1,25 +1,79 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import "bootstrap-icons/font/bootstrap-icons.css";
+import "./homework.css";
 
 export default function Homework() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [feedback, setFeedback] = useState("");
   const [appraise, setAppraise] = useState("1");
+  const [isFeedBackShow, setIsFeedBackShow] = useState(false);
+  const [lowAppraise, setLowAppraise] = useState('');
+  
+  const [error,setError] = useState("");
+
+  const invalidNameRexg = /^[A-Za-zА-Яа-яЁёҰұҮүҚқҒғӨөҺһІіӘәáńǵóúÁŃǴÓÚ\s'-]+$/;
 
   const retStar = (num) => {
     let ret = [];
     for (let i = 0; i < num; i++) {
-      ret.push(<i key={num + '_star_' + i } className="bi bi-star-fill"></i>);
+      ret.push("⭐");
+    }
+    if (num === 1) {
+      ret.push(" Толімсіз");
+    }
+    if (num === 3) {
+      ret.push(" Ортақал");
+    }
+    if (num === 5) {
+      ret.push(" Қатті ыразы");
     }
     return ret;
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(name, email, feedback);
+    if(error.length){
+      return;
+    }
+    setEmail("");
+    setFeedback("");
+    setAppraise("5");
+    setIsFeedBackShow(false);
+    setLowAppraise("");
+    alert("Сіздің бағаңізді сәтті қабылдап алдық!");
   };
+
+  useEffect(()=>{
+    if(name.length<2){
+      setError("Аты-жөніңіз 2 орыннан азболуға болмайды!");
+    }
+    if(!invalidNameRexg.test(name)){
+      setError("Аты-жөніңіз еңгізуіңіз толымсыз!");
+    }
+  },[name]);
+  useEffect(()=>{
+    setError('');
+    if(email.length<5){
+      setError("Электрондық пошта-адрессіңіз 5 орыннан азболуға болмайды!");
+    }
+    if(!email.includes("@") || !email.includes(".")){
+      setError("Электрондық пошта-адрессіңіз еңгізуіңіз толымсыз!");
+    }
+  },[email]);
+  useEffect(()=>{
+    setIsFeedBackShow(appraise<3);
+  },[appraise]);
+
+  useEffect(()=>{
+    setError('');
+    if(isFeedBackShow){
+      if(lowAppraise.length<10){
+        setError("10 орыннан азболуға болмайды!");
+      }
+    }
+  },[lowAppraise]);
   return (
     <div>
       <h1>Кері байланыс Формасы</h1>
@@ -31,6 +85,7 @@ export default function Homework() {
             id="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            required
           />
         </div>
         <div className="box">
@@ -40,19 +95,24 @@ export default function Homework() {
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            required
           />
         </div>
         <div className="box">
           <label htmlFor="feedback">Пікіріңіз:</label>
           <textarea
             id="feedback"
-            onChange={(e) => setFeedback(e.target.value)}></textarea>
+            rows={5}
+            value={feedback}
+            onChange={(e) => setFeedback(e.target.value)}
+            required></textarea>
         </div>
         <div className="box">
           <label htmlFor="appraise">Бағаңызды қойыңыз:</label>
           <select
             name="appraise"
             id="appraise"
+            value={appraise}
             onChange={(e) => setAppraise(e.target.value)}>
             <option value="1">
               {retStar(1).map((item) => {
@@ -62,7 +122,7 @@ export default function Homework() {
             <option value="2">
               {retStar(2).map((item) => {
                 return item;
-              })}              
+              })}
             </option>
             <option value="3">
               {retStar(3).map((item) => {
@@ -81,7 +141,12 @@ export default function Homework() {
             </option>
           </select>
         </div>
+        {isFeedBackShow && <div className="box">
+          <label htmlFor="whyLowAppraise">Төмен бағалау себеуы:</label>
+          <textarea name="whyLowAppraise" id="lowApprise" value={lowAppraise} rows={5} onChange={(e) => setLowAppraise(e.target.value)}></textarea>
+        </div>}
         <button type="submit">Бағалау</button>
+        <p id="error">{error}</p>
       </form>
     </div>
   );
