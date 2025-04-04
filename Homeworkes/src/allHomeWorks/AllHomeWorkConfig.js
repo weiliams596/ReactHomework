@@ -35,28 +35,36 @@ import HW3_3Child3 from './Week28/D4_W28_HW/Homework/Pages/Register';
 
 import Homework4_1 from './Week29/D1_W29_HW/Homework/Homework';
 
+import Homework4_2 from "./Week29/D2_W29_Hw/Homework/Homework";
+
+import HW4_2Child1 from './Week29/D2_W29_Hw/Homework/Pages/Register';
+import HW4_2Child2 from './Week29/D2_W29_Hw/Homework/Pages/Login';
+
+import Homework4_4 from './Week29/D4_W29_HW/Homework/Homework';
+import HW4_4Child1 from './Week29/D4_W29_HW/Homework/Pages/Detail';
+
 const routes = [
     {
         week: 26,
         homework: [
             {
                 id: 1,
-                name:'React & JSX',
+                name: 'React & JSX',
                 path: '/HW1',
                 component: HomeWork1
             }, {
                 id: 2,
-                name:'Components & Props',
+                name: 'Components & Props',
                 path: '/HW2',
                 component: HomeWork2
             }, {
                 id: 3,
-                name:'Eventhandle & User Interaction',
+                name: 'Eventhandle & User Interaction',
                 path: '/HW3',
                 component: HomeWork3
             }, {
                 id: 4,
-                name:'Mini-Project:Static Blog Page',
+                name: 'Mini-Project:Static Blog Page',
                 path: '/HW4',
                 component: HomeWork4
             }
@@ -67,71 +75,88 @@ const routes = [
         homework: [
             {
                 id: 5,
-                name:'State with useState',
+                name: 'State with useState',
                 path: '/HW5',
                 component: HomeWork2_1
             }, {
                 id: 6,
-                name:'Delete Tasks & Filter Tasks',
+                name: 'Delete Tasks & Filter Tasks',
                 path: '/HW6',
                 component: HomeWork2_2
             }, {
                 id: 7,
-                name:'Persist Tasks with Local storage',
+                name: 'Persist Tasks with Local storage',
                 path: '/HW7',
                 component: HomeWork2_3
             }
-        ]        
-    },{
+        ]
+    }, {
         week: 28,
         homework: [
             {
                 id: 8,
-                name:'React Router',
+                name: 'React Router',
                 path: '/HW8',
                 component: Homework3_1,
-                chilldren:[
-                    {id:8001, path: '/HW8/home', component: HW3_1Child1 },
-                    {id:8002, path: '/HW8/Profile', component:HW3_1Child2 },
-                    {id:8003, path: '/HW8/project', component: HW3_1Child3},
-                    {id:8003, path: '/HW8/about', component: HW3_1Child4},
-                  ]
+                chilldren: [
+                    { id: 8001, path: '/HW8/home', component: HW3_1Child1 },
+                    { id: 8002, path: '/HW8/Profile', component: HW3_1Child2 },
+                    { id: 8003, path: '/HW8/project', component: HW3_1Child3 },
+                    { id: 8003, path: '/HW8/about', component: HW3_1Child4 },
+                ]
             },
             {
                 id: 9,
-                name:'Dynamic Routing',
-                path:'/HW9',
-                component:Homework3_2,
-                chilldren:[
-                    {id:9001, path:'/HW9/home' ,component:HW3_2Child1},
-                    {id:9002, path:'/HW9/project' ,component:HW3_2Child2},
-                    {id:9003, path:'/HW9/project/:id' ,component:HW3_2Child3},
-                    {id:9004, path:'/HW9/about' ,component:HW3_2Child4},
+                name: 'Dynamic Routing',
+                path: '/HW9',
+                component: Homework3_2,
+                chilldren: [
+                    { id: 9001, path: '/HW9/home', component: HW3_2Child1 },
+                    { id: 9002, path: '/HW9/project', component: HW3_2Child2 },
+                    { id: 9003, path: '/HW9/project/:id', component: HW3_2Child3 },
+                    { id: 9004, path: '/HW9/about', component: HW3_2Child4 },
                 ]
-            },{
+            }, {
                 id: 10,
-                name:'Nested, Protected Route',
-                path:'/HW10',
-                component:Homework3_3,
-                chilldren:[
-                    {id:10001, path:'/HW10/home' ,component:HW3_3Child1},
-                    {id:10002, path:'/HW10/login' ,component:HW3_3Child2},
-                    {id:10003, path:'/HW10/register',component:HW3_3Child3},
+                name: 'Nested, Protected Route',
+                path: '/HW10',
+                component: Homework3_3,
+                chilldren: [
+                    { id: 10001, path: '/HW10/home', component: HW3_3Child1 },
+                    { id: 10002, path: '/HW10/login', component: HW3_3Child2 },
+                    { id: 10003, path: '/HW10/register', component: HW3_3Child3 },
                 ]
             }
         ]
-        },{
-            week: 29,
-            homework: [
-                {
-                    id: 11,
-                    name:'Authentication',
-                    path: '/HW11',
-                    component: Homework4_1,
-                    chilldren: []
-                },
-            ]
-        }
+    }, {
+        week: 29,
+        homework: [
+            {
+                id: 11,
+                name: 'Authentication',
+                path: '/HW11',
+                component: Homework4_1,
+                chilldren: []
+            }, {
+                id: 12,
+                name: 'Axios Register Page',
+                path: '/HW12',
+                component: Homework4_2,
+                chilldren: [
+                    { id: 12001, path: '/HW12/register', component: HW4_2Child1 },
+                    { id: 12002, path: '/HW12/login', component: HW4_2Child2 }
+                ]
+            },{
+                id:13,
+                name:'Movie Search App',
+                path:'/HW13',
+                component:Homework4_4,
+                chilldren:[
+                    {id:13001,path:'/HW13/Details/:id',component:HW4_4Child1}
+                ]
+            }
+        ]
+    }
 ];
 
 export default routes;

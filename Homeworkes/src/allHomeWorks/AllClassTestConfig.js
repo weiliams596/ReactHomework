@@ -27,6 +27,13 @@ import ClassTest4_1 from './Week29/D1_W29_HW/ClassTest/ClassTest';
 
 import CT4_1Child1 from './Week29/D1_W29_HW/ClassTest/Pages/LoginForm';
 import CT4_1Child2 from './Week29/D1_W29_HW/ClassTest/Pages/Register';
+
+import ClassTest4_2 from './Week29/D2_W29_Hw/ClassTest/ClassTest';
+
+import ClassTest4_3 from './Week29/D3_W29_HW/ClassTest/ClassTest';
+
+import ClassTest4_4 from './Week29/D4_W29_HW/ClassTest/ClassTesst';
+import CT4_4Child1 from './Week29/D4_W29_HW/ClassTest/Pages/Detail';
 const routes = [
     {
         week: 26,
@@ -134,8 +141,30 @@ const routes = [
                         component:CT4_1Child2
                     }
                 ]
+            },{
+                id:212,
+                name: "Axios exercise",
+                path: '/CT12',
+                component: ClassTest4_2
+            },{
+                id:213,
+                name: "Axios exercise 2",
+                path: '/CT13',
+                component: ClassTest4_3,
+            },{
+                id:214,
+                name: "Axios for IMDB Movies API exercise",
+                path: '/CT14',
+                component: ClassTest4_4,
+                chilldren:[
+                    {
+                        id:214001,
+                        name: "Name details",
+                        path: '/CT14/Details/:id',
+                        component: CT4_4Child1
+                    }
+                ]
             }
-
         ]
     }
 ];
