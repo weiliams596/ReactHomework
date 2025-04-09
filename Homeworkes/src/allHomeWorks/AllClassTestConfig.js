@@ -34,6 +34,8 @@ import ClassTest4_3 from './Week29/D3_W29_HW/ClassTest/ClassTest';
 
 import ClassTest4_4 from './Week29/D4_W29_HW/ClassTest/ClassTesst';
 import CT4_4Child1 from './Week29/D4_W29_HW/ClassTest/Pages/Detail';
+
+import ClassTest5_1 from './Week30/D1_W30_HW/ClassTest/ClassTest';
 const routes = [
     {
         week: 26,
@@ -164,6 +166,16 @@ const routes = [
                         component: CT4_4Child1
                     }
                 ]
+            }
+        ]
+    },{
+        week:30,
+        classtest: [
+            {
+                id:301,
+                name: "Context API exercise",
+                path: '/CT15',
+                component: ClassTest5_1
             }
         ]
     }

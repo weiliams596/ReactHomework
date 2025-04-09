@@ -43,6 +43,8 @@ import HW4_2Child2 from './Week29/D2_W29_Hw/Homework/Pages/Login';
 import Homework4_4 from './Week29/D4_W29_HW/Homework/Homework';
 import HW4_4Child1 from './Week29/D4_W29_HW/Homework/Pages/Detail';
 
+import Homework5_1 from './Week30/D1_W30_HW/Homework/Homework';
+
 const routes = [
     {
         week: 26,
@@ -154,6 +156,16 @@ const routes = [
                 chilldren:[
                     {id:13001,path:'/HW13/Details/:id',component:HW4_4Child1}
                 ]
+            }
+        ]
+    },{
+        week:30,
+        homework:[
+            {
+                id:14,
+                name:'Global useContext',
+                path:'/HW14',
+                component:Homework5_1
             }
         ]
     }
