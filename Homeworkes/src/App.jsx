@@ -1,19 +1,19 @@
-import React, { use, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 
 
-import MyRouteres from "./allHomeWorks/MyRouteres";
 import GlobalContex from "./MyContext";
 
 
 
 
-function App() {
+function App({children}) {
   const [info,setInfo] =useState({});
-
+  useEffect(()=>{
+  },[info]);
   return (
     <GlobalContex.Provider value={{ info, setInfo }}>
-        <MyRouteres />
+      {children }
     </GlobalContex.Provider>
   );
 }
