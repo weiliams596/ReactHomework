@@ -16,30 +16,34 @@
     flex-direction: column;    
 }
 
-.homework-section{
+.homework-section,
+.class-test-section{
     display: flex;
     width: 100%;
     flex-direction: column;
     margin: 20px;
 }
-
-.homework-div{
+.homework-div,
+.class-test-div{
     width: 100%;
     display: flex;
     justify-content: space-around;
 }
 
-.homework-div a{
+.homework-div a,
+.class-test-div a{
     padding:20px;
     text-decoration: none;
     font-size: 20px;    
 }
 
-.homework-div a:hover{
+.homework-div a:hover,
+.class-test-div a:hover{
     background-color: #007bff;
 }
 
-.class-home-work{
+.class-home-work,
+.class-test{
     display: flex;
     flex-direction: column;
 }

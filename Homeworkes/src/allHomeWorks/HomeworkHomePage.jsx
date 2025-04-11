@@ -10,6 +10,7 @@ export default function HomeworkHomePage() {
   });
   return (
     <main key="homework-main" className="homework-main">
+      <h1>All Homeworks</h1>
       {routes.map((item, index1) => {
         return (
           <section
@@ -25,11 +26,6 @@ export default function HomeworkHomePage() {
                     <Link key={item1.id} to={item1.path}>
                       {item1.name}{" "}
                     </Link>
-                    <Link
-                      key={classRoutes[index1].classtest[index2].id}
-                      to={classRoutes[index1].classtest[index2].path}>
-                      {classRoutes[index1].classtest[index2].name}
-                    </Link>
                   </div>
                 );
               })}
@@ -37,6 +33,28 @@ export default function HomeworkHomePage() {
           </section>
         );
       })}
+      <h1>All Class Tests</h1>
+      {classRoutes.map((item, index1) => {
+        return (<section
+          key={"class-test-section" + index1}
+          className="class-test-section">
+          <h2>Week {item.week}</h2>
+          <div key={"class-test-div" + index1} className="homework-div">
+            {item.classtest.map((item1, index2) => {
+              return (
+                <div
+                  key={"class-test-div-item" + index2}
+                  className="class-test">
+                  <Link key={item1.id} to={item1.path}>
+                    {item1.name}{" "}
+                  </Link>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+      );
+    })}
     </main>
   );
 }

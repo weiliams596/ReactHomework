@@ -36,6 +36,15 @@ import ClassTest4_4 from './Week29/D4_W29_HW/ClassTest/ClassTesst';
 import CT4_4Child1 from './Week29/D4_W29_HW/ClassTest/Pages/Detail';
 
 import ClassTest5_1 from './Week30/D1_W30_HW/ClassTest/ClassTest';
+
+import ClassTest5_2 from './Week30/D2_W30_HW/ClassTest/ClassTest';
+import CT5_2Child1 from './Week30/D2_W30_HW/ClassTest/Pages/Home';
+
+import ClassTest5_3 from './Week30/D4_W30_HW/ClassTest/ClassTest';
+import CT5_3Child1 from './Week30/D4_W30_HW/ClassTest/Pages/FlightList';
+import CT5_3Child2 from './Week30/D4_W30_HW/ClassTest/Pages/FlightBooking';
+
+
 const routes = [
     {
         week: 26,
@@ -172,10 +181,27 @@ const routes = [
         week:30,
         classtest: [
             {
-                id:301,
+                id:215,
                 name: "Context API exercise",
                 path: '/CT15',
                 component: ClassTest5_1
+            },{
+                id:216,
+                name:"Context API exercise 2",
+                path: '/CT16',
+                component:ClassTest5_2,
+                chilldren:[
+                    {id:216001,name:"Change Theme",path:"/CT16/home",component:CT5_2Child1}
+                ]
+            },{
+                id:217,
+                name:"Context API exercise 3",
+                path: '/CT17',
+                component:ClassTest5_3,
+                chilldren:[
+                    {id:217001,name:"Flight List",path:"/CT17/flights",component:CT5_3Child1},
+                    {id:217002,name:"Flight Booking",path:"/CT17/booking/:id",component:CT5_3Child2}
+                ]
             }
         ]
     }
