@@ -45,6 +45,8 @@ import HW4_4Child1 from './Week29/D4_W29_HW/Homework/Pages/Detail';
 
 import Homework5_1 from './Week30/D1_W30_HW/Homework/Homework';
 
+import Homework5_2 from './Week31/Homework/Homework';
+
 const routes = [
     {
         week: 26,
@@ -166,6 +168,16 @@ const routes = [
                 name:'Global useContext',
                 path:'/HW14',
                 component:Homework5_1
+            }
+        ]
+    },{
+        week:31,
+        homework:[
+            {
+                id:15,
+                name:'Change Color with useReducer',
+                path:'/HW15',
+                component:Homework5_2
             }
         ]
     }

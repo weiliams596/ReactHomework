@@ -45,6 +45,8 @@ import CT5_3Child1 from './Week30/D4_W30_HW/ClassTest/Pages/FlightList';
 import CT5_3Child2 from './Week30/D4_W30_HW/ClassTest/Pages/FlightBooking';
 
 
+import ClassTest6_1 from './Week31/ClassTest/CLassTest';
+
 const routes = [
     {
         week: 26,
@@ -149,27 +151,27 @@ const routes = [
                         id: 211002,
                         name: "Register Page",
                         path: '/CT11/Register',
-                        component:CT4_1Child2
+                        component: CT4_1Child2
                     }
                 ]
-            },{
-                id:212,
+            }, {
+                id: 212,
                 name: "Axios exercise",
                 path: '/CT12',
                 component: ClassTest4_2
-            },{
-                id:213,
+            }, {
+                id: 213,
                 name: "Axios exercise 2",
                 path: '/CT13',
                 component: ClassTest4_3,
-            },{
-                id:214,
+            }, {
+                id: 214,
                 name: "Axios for IMDB Movies API exercise",
                 path: '/CT14',
                 component: ClassTest4_4,
-                chilldren:[
+                chilldren: [
                     {
-                        id:214001,
+                        id: 214001,
                         name: "Name details",
                         path: '/CT14/Details/:id',
                         component: CT4_4Child1
@@ -177,31 +179,41 @@ const routes = [
                 ]
             }
         ]
-    },{
-        week:30,
+    }, {
+        week: 30,
         classtest: [
             {
-                id:215,
+                id: 215,
                 name: "Context API exercise",
                 path: '/CT15',
                 component: ClassTest5_1
-            },{
-                id:216,
-                name:"Context API exercise 2",
+            }, {
+                id: 216,
+                name: "Context API exercise 2",
                 path: '/CT16',
-                component:ClassTest5_2,
-                chilldren:[
-                    {id:216001,name:"Change Theme",path:"/CT16/home",component:CT5_2Child1}
+                component: ClassTest5_2,
+                chilldren: [
+                    { id: 216001, name: "Change Theme", path: "/CT16/home", component: CT5_2Child1 }
                 ]
-            },{
-                id:217,
-                name:"Context API exercise 3",
+            }, {
+                id: 217,
+                name: "Context API exercise 3",
                 path: '/CT17',
-                component:ClassTest5_3,
-                chilldren:[
-                    {id:217001,name:"Flight List",path:"/CT17/flights",component:CT5_3Child1},
-                    {id:217002,name:"Flight Booking",path:"/CT17/booking/:id",component:CT5_3Child2}
+                component: ClassTest5_3,
+                chilldren: [
+                    { id: 217001, name: "Flight List", path: "/CT17/flights", component: CT5_3Child1 },
+                    { id: 217002, name: "Flight Booking", path: "/CT17/booking/:id", component: CT5_3Child2 }
                 ]
+            }
+        ]
+    }, {
+        week: 31,
+        classtest: [
+            {
+                id: 218,
+                name: "useReducer exercise",
+                path: '/CT18',
+                component: ClassTest6_1
             }
         ]
     }
