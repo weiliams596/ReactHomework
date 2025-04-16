@@ -182,7 +182,7 @@ const routes = [
                 component:Homework6_1
             },{
                 id:16,
-                name:'Fetch Data with useReducer',
+                name:'Localstorage with useReducer',
                 path:'/HW16',
                 component:Homework6_2
             }
