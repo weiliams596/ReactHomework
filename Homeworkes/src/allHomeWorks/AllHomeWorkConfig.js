@@ -45,7 +45,9 @@ import HW4_4Child1 from './Week29/D4_W29_HW/Homework/Pages/Detail';
 
 import Homework5_1 from './Week30/D1_W30_HW/Homework/Homework';
 
-import Homework5_2 from './Week31/Homework/Homework';
+import Homework6_1 from './Week31/D1_W31_HW/Homework/Homework';
+
+import Homework6_2 from './Week31/D2_W31_HW/Homework/Homework';
 
 const routes = [
     {
@@ -177,7 +179,12 @@ const routes = [
                 id:15,
                 name:'Change Color with useReducer',
                 path:'/HW15',
-                component:Homework5_2
+                component:Homework6_1
+            },{
+                id:16,
+                name:'Fetch Data with useReducer',
+                path:'/HW16',
+                component:Homework6_2
             }
         ]
     }

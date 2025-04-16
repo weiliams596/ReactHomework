@@ -45,7 +45,10 @@ import CT5_3Child1 from './Week30/D4_W30_HW/ClassTest/Pages/FlightList';
 import CT5_3Child2 from './Week30/D4_W30_HW/ClassTest/Pages/FlightBooking';
 
 
-import ClassTest6_1 from './Week31/ClassTest/CLassTest';
+import ClassTest6_1 from './Week31/D1_W31_HW/ClassTest/CLassTest';
+
+import ClassTest6_2 from './Week31/D2_W31_HW/ClassTest/ClassTest';
+import CT6_2Child1 from './Week31/D2_W31_HW/ClassTest/Products';
 
 const routes = [
     {
@@ -214,6 +217,14 @@ const routes = [
                 name: "useReducer exercise",
                 path: '/CT18',
                 component: ClassTest6_1
+            }, {
+                id: 219,
+                name: "useReducer exercise 2",
+                path: '/CT19',
+                component: CT6_2Child1,
+                // chilldren: [
+                //     { id: 219001, name: "Product list", path: "/CT19/product", component: CT6_2Child1 }
+                // ]
             }
         ]
     }
