@@ -32,6 +32,12 @@ echo Files copied successfully!
 echo Submitting files to GitHub...
 
 cd ../../ReactShower
+@echo off
+setlocal enabledelayedexpansion
+
+set inputFile=index.html
+set tempFile=temp.html
+@echo off
 
 echo Please enter your commit message:
 set /p commitMessage=

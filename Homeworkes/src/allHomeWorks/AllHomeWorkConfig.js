@@ -49,6 +49,8 @@ import Homework6_1 from './Week31/D1_W31_HW/Homework/Homework';
 
 import Homework6_2 from './Week31/D2_W31_HW/Homework/Homework';
 
+import Homework6_3 from './Week31/D3_W31_HW/Homework/Homework';
+
 const routes = [
     {
         week: 26,
@@ -185,6 +187,11 @@ const routes = [
                 name:'Localstorage with useReducer',
                 path:'/HW16',
                 component:Homework6_2
+            },{
+                id:17,
+                name:'Use useReducer',
+                path:'/HW17',
+                component:Homework6_3
             }
         ]
     }

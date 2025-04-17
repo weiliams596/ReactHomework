@@ -50,6 +50,10 @@ import ClassTest6_1 from './Week31/D1_W31_HW/ClassTest/CLassTest';
 import ClassTest6_2 from './Week31/D2_W31_HW/ClassTest/ClassTest';
 import CT6_2Child1 from './Week31/D2_W31_HW/ClassTest/Products';
 
+import ClassTest6_3 from './Week31/D3_W31_HW/ClassTest/CLassTest';
+
+import ClassTest6_4 from './Week31/D4_W31_HW/ClassTest/ClassTest';
+
 const routes = [
     {
         week: 26,
@@ -225,6 +229,16 @@ const routes = [
                 // chilldren: [
                 //     { id: 219001, name: "Product list", path: "/CT19/product", component: CT6_2Child1 }
                 // ]
+            },{
+                id: 220,
+                name: "useReducer exercise 3",
+                path: '/CT20',
+                component: ClassTest6_3
+            },{
+                id: 221,
+                name: "useReducer exercise 4",
+                path: '/CT21',
+                component: ClassTest6_4
             }
         ]
     }
