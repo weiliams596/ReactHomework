@@ -51,6 +51,8 @@ import Homework6_2 from './Week31/D2_W31_HW/Homework/Homework';
 
 import Homework6_3 from './Week31/D3_W31_HW/Homework/Homework';
 
+import Homework6_4 from './Week31/D4_W31_HW/Homework/Homework';
+
 const routes = [
     {
         week: 26,
@@ -192,6 +194,11 @@ const routes = [
                 name:'Use useReducer',
                 path:'/HW17',
                 component:Homework6_3
+            },{
+                id:18,
+                name:'Use useReducer make Work list',
+                path:'/HW18',
+                component:Homework6_4
             }
         ]
     }
