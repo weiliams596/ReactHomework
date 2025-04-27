@@ -54,6 +54,10 @@ import ClassTest6_3 from './Week31/D3_W31_HW/ClassTest/CLassTest';
 
 import ClassTest6_4 from './Week31/D4_W31_HW/ClassTest/ClassTest';
 
+import ClassTest7_1 from './Week32/D2_W32_HW/ClassTest/ClassTest'
+
+import ClassTest7_2 from './Week32/D3_W32_HW/ClassTest/ClassTest';
+
 const routes = [
     {
         week: 26,
@@ -239,6 +243,21 @@ const routes = [
                 name: "useReducer exercise 4",
                 path: '/CT21',
                 component: ClassTest6_4
+            }
+        ]
+    },{
+        week: 32,
+        classtest: [
+            {
+                id: 222,
+                name: "Custom hook exercise",
+                path: '/CT22',
+                component: ClassTest7_1
+            },{
+                id: 223,
+                name: "Custom hook exercise 2",
+                path: '/CT23',
+                component: ClassTest7_2
             }
         ]
     }

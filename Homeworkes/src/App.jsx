@@ -1,19 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 
-
 import GlobalContex from "./MyContext";
 
-
-
-
-function App({children}) {
-  const [info,setInfo] =useState({});
-  useEffect(()=>{
-  },[info]);
+function App({ children }) {
+  const [info, setInfo] = useState({});
+  useEffect(() => {}, [info]);
   return (
     <GlobalContex.Provider value={{ info, setInfo }}>
-      {children }
+      {children}
     </GlobalContex.Provider>
   );
 }
